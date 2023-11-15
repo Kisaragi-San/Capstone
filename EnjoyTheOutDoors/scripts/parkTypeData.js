@@ -13,16 +13,3 @@ const parkTypesArray = [
   "Trail",
   "Parkway",
 ];
-
-const parkTypeList = document.getElementById("parkTypeList");
-const selectParkTypeButton = document.getElementById("selectParkTypeButton");
-
-function loadParkTypeList() {
-  for (const parkType of parkTypesArray) {
-    let option = document.createElement("option");
-    option.value = parkType;
-    option.text = parkType;
-    parkTypeList.appendChild(option);
-  }
-}
-loadParkTypeList();

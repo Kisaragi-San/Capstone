@@ -56,16 +56,3 @@ const locationsArray = [
     "Wyoming"
 ]
 
-
-const stateList = document.getElementById("stateList");
-const selectStateButton = document.getElementById("selectStateButton");
-
-function loadStateList() {
-  for (const state of locationsArray) {
-    let option = document.createElement("option");
-    option.value = state;
-    option.text = state;
-    stateList.appendChild(option);
-  }
-}
-loadStateList();
