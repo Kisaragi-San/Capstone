@@ -5784,49 +5784,45 @@ const nationalParksArray = [
 ];
 const parkInfoTableBody = document.querySelector("#parkInfoTableBody");
 const selectParkButton = document.getElementById("selectParkButton");
-const parkList = document.getElementById("parkList");
 
-function loadParkList() {
+function loadParkTable() {
   for (const nationalPark of nationalParksArray) {
-    let option = document.createElement("option");
-
-    option.textContent = nationalPark.LocationName;
-    option.value = nationalPark.LocationID;
-
-    parkList.appendChild(option);
+    buildParkInfoRow(nationalPark);
   }
 }
 
-function displayParkInfo() {
-  for (const park of nationalParksArray) {
-    buildParkInfoRow(park);
+// function displayParkInfo() {
+//   for (const park of nationalParksArray) {
+//     buildParkInfoRow(park);
+//   }
+
+// }
+function buildParkInfoRow(park) {
+  let tr = parkInfoTableBody.insertRow();
+  let td1 = tr.insertCell();
+  td1.innerText = park.LocationID;
+  let td2 = tr.insertCell();
+  td2.innerText = park.LocationName;
+  let td3 = tr.insertCell();
+  td3.innerText = park.Address;
+  let td4 = tr.insertCell();
+  td4.innerText = park.City;
+  let td5 = tr.insertCell();
+  td5.innerText = park.State;
+  let td6 = tr.insertCell();
+  td6.innerText = park.ZipCode.toLocaleString();
+  let td7 = tr.insertCell();
+  td7.innerText = park.Phone;
+  let td8 = tr.insertCell();
+  td8.innerText = park.Fax;
+  let td9 = tr.insertCell();
+  td9.innerText = park.Location.coordinates.toLocaleString();
+
+  let td10 = tr.insertCell();
+  if (park.Visit) {
+     td10.innerText = park.Visit;
   }
  
 }
-function buildParkInfoRow(park) {
-  let tr = parkInfoTableBody.insertRow();
-  let th1 = tr.insertCell();
-  th1.innerText = park.LocationID;
-  let th2 = tr.insertCell();
-  th2.innerText = park.LocationName;
-  let th3 = tr.insertCell();
-  th3.innerText = park.Address;
-  let th4 = tr.insertCell();
-  th4.innerText = park.City;
-  let th5 = tr.insertCell();
-  th5.innerText = park.State;
-  let th6 = tr.insertCell();
-  th6.innerText = park.ZipCode.toLocaleString();
-  let th7 = tr.insertCell();
-  th7.innerText = park.Phone;
-  let th8 = tr.insertCell();
-  th8.innerText = park.Fax;
-  let th9 = tr.insertCell();
-  th9.innerText = park.coordinates.toLocaleString();
-  let th10 = tr.insertCell();
-  th10.innerText = park.Visit;
-}
 
-loadParkList();
-
-selectParkButton.onclick = displayParkInfo;
+loadParkTable();
