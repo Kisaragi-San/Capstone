@@ -13,6 +13,11 @@
         <option value="">Select...</option>
       </select>
       <button type="button" id="selectParkButton">Select</button>
+      <label for="parkTypeList">Park Type</label>
+      <select id="parkTypeList">
+        <option value="">Select...</option>
+      </select>
+      <button type="button" id="selectParkTypeButton">Sort</button>
       <h3>National Park</h3>
       <table>
         <thead>
@@ -26,9 +31,10 @@
             <th>Phone</th>
             <th>Fax</th>
             <th>Coordinates</th>
+            <th>Website</th>
           </tr>
         </thead>
-        <tbody id="parkInfo"></tbody>
+        <tbody id="parkInfoTableBody"></tbody>
       </table>
     </main>
     <footer></footer>

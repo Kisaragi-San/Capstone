@@ -14,15 +14,15 @@ const parkTypesArray = [
   "Parkway",
 ];
 
-const parkList = document.getElementById("parkList");
-const selectParkButton = document.getElementById("selectParkButton");
+const parkTypeList = document.getElementById("parkTypeList");
+const selectParkTypeButton = document.getElementById("selectParkTypeButton");
 
-function loadParkList() {
-  for (const park of parkTypesArray) {
+function loadParkTypeList() {
+  for (const parkType of parkTypesArray) {
     let option = document.createElement("option");
-    option.value = park;
-    option.text = park;
-    parkList.appendChild(option);
+    option.value = parkType;
+    option.text = parkType;
+    parkTypeList.appendChild(option);
   }
 }
-loadParkList();
+loadParkTypeList();
