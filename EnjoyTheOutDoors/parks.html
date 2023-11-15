@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parks</title>
+  </head>
+  <body>
+    <header></header>
+    <main class="container">
+      <label for="parkList">Park</label>
+      <select id="parkList">
+        <option value="">Select...</option>
+      </select>
+      <button type="button" id="selectParkButton">Select</button>
+      <h3>National Park</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>LocationId</th>
+            <th>Location Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+            <th>Phone</th>
+            <th>Fax</th>
+            <th>Coordinates</th>
+          </tr>
+        </thead>
+        <tbody id="parkInfo"></tbody>
+      </table>
+    </main>
+    <footer></footer>
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/parks.js"></script>
+  </body>
+</html>
