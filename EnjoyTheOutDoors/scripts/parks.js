@@ -2,7 +2,6 @@
 
 const stateList = document.getElementById("stateList");
 
-
 function loadStateList() {
   for (const state of locationsArray) {
     let option = document.createElement("option");
@@ -33,6 +32,29 @@ function loadParkTable() {
   }
 }
 
+function loadParkTableByState() {
+  parkInfoTableBody.innerHTML = "";
+  let stateName = stateList.value;
+  console.log(stateName);
+  for (const nationalPark of nationalParksArray) {
+    if (nationalPark.State == stateName) {
+      buildParkInfoRow(nationalPark);
+    }
+  }
+}
+stateList.onchange = loadParkTableByState;
+
+function loadParkTableByType() {
+  parkInfoTableBody.innerHTML = "";
+  let parkType = parkTypeList.value;
+  console.log(parkType);
+  for (const nationalPark of nationalParksArray) {
+    if (nationalPark.LocationName.indexOf(parkType) != -1) {
+      buildParkInfoRow(nationalPark);
+    }
+  }
+}
+parkTypeList.onchange = loadParkTableByType;
 function buildParkInfoRow(park) {
   let tr = parkInfoTableBody.insertRow();
   let td1 = tr.insertCell();
