@@ -94,7 +94,10 @@ function buildParkInfoRow(park) {
 
   let td10 = tr.insertCell();
   if (park.Visit) {
-    td10.innerText = park.Visit;
+    let parkLink = document.createElement("a")
+    parkLink.href = park.Visit
+    parkLink.innerText = park.Visit
+    td10.appendChild(parkLink);
   }
 }
 
