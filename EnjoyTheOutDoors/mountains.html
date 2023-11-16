@@ -7,7 +7,18 @@
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <article>
+        <form>
+          <label for="mountainsList">Mountains</label>
+          <select id="mountainsList" onchange="showMountainDetails();">
+            <option value="">Select...</option>
+          </select>
+        </form>
+        <div id="outPut"></div>
+        <p id="mountainDetailsParagraph"></p>
+      </article>
+    </main>
     <footer></footer>
 
     <script src="scripts/mountainData.js"></script>

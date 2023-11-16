@@ -1,5 +1,21 @@
 "use strict";
 
+function displayParkType() {
+  let parkDrop = document.getElementById("typeDropDown");
+  let stateDrop = document.getElementById("stateDropDown");
+
+  parkDrop.style.display = "block";
+  stateDrop.style.display = "none";
+}
+
+function displayState() {
+  let parkDrop = document.getElementById("typeDropDown");
+  let stateDrop = document.getElementById("stateDropDown");
+
+  parkDrop.style.display = "none";
+  stateDrop.style.display = "block";
+}
+
 const stateList = document.getElementById("stateList");
 
 function loadStateList() {

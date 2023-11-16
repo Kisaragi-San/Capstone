@@ -7,17 +7,27 @@
   </head>
   <body>
     <header></header>
+    <form>
+      <input type="radio" name="search" id="parkType" onchange="displayParkType();" class="btn-check">
+        <label for="parkType" class="btn btn-outline-primary">Park Type</label>
+      <input type="radio" name="search" id="state"  onchange="displayState();" class="btn-check">
+        <label for="state" class="btn btn-outline-primary">State</label>
+
+</form>
+<div style="display: none;" id="stateDropDown">
     <main class="container">
       <label for="stateList">State</label>
       <select id="stateList">
         <option value="">Select...</option>
       </select>
+</div>
 
+<div style="display: none;" id="typeDropDown">
       <label for="parkTypeList">Park Type</label>
       <select id="parkTypeList">
         <option value="">Select...</option>
       </select>
-
+</div>
       <h3>National Park</h3>
       <table>
         <thead>
