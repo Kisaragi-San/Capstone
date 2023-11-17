@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parks</title>
-    <link rel="stylesheet" href="css/styles.css">
-
-  </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> 
+   </head>
   <body>
-    <header></header>
+    <header>  
+      <div style="margin: 1em;">
+        <a href="index.html">Home</a>
+        <a href="parks.html">Parks</a>
+        <a href="mountains.html">Mountains</a>
+        </div>
+</header>
+
     <form>
       <input type="radio" name="search" id="parkType" onchange="displayParkType();" class="btn-check">
         <label for="parkType" class="btn btn-outline-primary">Park Type</label>
@@ -17,7 +23,7 @@
 
 </form>
 <div style="display: none;" id="stateDropDown">
-    <main class="container">
+    <main>
       <label for="stateList">State</label>
       <select id="stateList">
         <option value="">Select...</option>
