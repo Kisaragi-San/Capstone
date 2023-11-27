@@ -4,38 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parks</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> 
-   </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css" />
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
   <body>
-    <header>  
-      <div style="margin: 1em;">
-        <a href="index.html">Home</a>
-        <a href="parks.html">Parks</a>
-        <a href="mountains.html">Mountains</a>
-        </div>
-</header>
-
-    <form>
-      <input type="radio" name="search" id="parkType" onchange="displayParkType();" class="btn-check">
-        <label for="parkType" class="btn btn-outline-primary">Park Type</label>
-      <input type="radio" name="search" id="state"  onchange="displayState();" class="btn-check">
-        <label for="state" class="btn btn-outline-primary">State</label>
-
-</form>
-<div style="display: none;" id="stateDropDown">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html"><strong>Outdoors</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="parks.html">Parks</a></li>
+          <li><a href="mountains.html">Mountains</a></li>
+         
+        </ul>
+      </nav>
+    </header>
     <main>
-      <label for="stateList">State</label>
-      <select id="stateList">
-        <option value="">Select...</option>
-      </select>
-</div>
+      <form>
+        <input type="radio" name="search" id="parkType" onchange="displayParkType();" class="btn-check" />
+        <label for="parkType" class="btn btn-outline-primary">Park Type</label>
+        <input type="radio" name="search" id="state" onchange="displayState();" class="btn-check" />
+        <label for="state" class="btn btn-outline-primary">State</label>
+      </form>
+      <div style="display: none" id="stateDropDown">
+        <label for="stateList">State</label>
+        <select id="stateList">
+          <option value="">Select...</option>
+        </select>
+      </div>
 
-<div style="display: none;" id="typeDropDown">
-      <label for="parkTypeList">Park Type</label>
-      <select id="parkTypeList">
-        <option value="">Select...</option>
-      </select>
-</div>
+      <div style="display: none" id="typeDropDown">
+        <label for="parkTypeList">Park Type</label>
+        <select id="parkTypeList">
+          <option value="">Select...</option>
+        </select>
+      </div>
       <h3>National Park</h3>
       <table>
         <thead>
